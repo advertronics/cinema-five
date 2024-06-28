@@ -12,7 +12,7 @@ const Timestamp = date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) +
 const Password = btoa(`${BusinessShortCode}${passkey}${Timestamp}`)
 const PartyB = "174379"
 
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<String> {
   const requestData = await req.json()
 
   const access_token = await generateSafcomAccessToken()
@@ -43,9 +43,9 @@ export async function POST(req: Request) {
     })
 
     const paymentResData = await paymentRes.json()
-    return NextResponse.json({ paymentResData }, { status: 201 })
+    return "success"
   } catch (e) {
-    return false
+    return "failed"
   }
   //return NextResponse.json({ message: "just testing" }, { status: 201 })
 }
