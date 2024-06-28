@@ -5,7 +5,7 @@ type SAFCOMTypes = {
 }
 
 export const tryOutFetchTransaction = async (paymentDetails: SAFCOMTypes) => {
-  const paymentRes = await fetch(`${process.env.HOME_URL}/api/safPayments/`, {
+  const paymentRes = await fetch(`/api/safPayments/`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"
