@@ -8,7 +8,9 @@ const NavbarButtons = () => {
   const { status, data: session } = useSession()
 
   const payfunction = async () => {
-    await tryOutFetchTransaction({ amount: 10, phone: 254712990778, videoCode: "VID1001" })
+    const payment = await tryOutFetchTransaction({ amount: 10, phone: 254712990778, videoCode: "VID1001" })
+    const paymentData = await.json()
+    console.log(paymentData)
   }
 
   return (
