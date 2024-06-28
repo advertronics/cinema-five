@@ -2,9 +2,14 @@
 
 import React from "react"
 import { signIn, useSession, signOut } from "next-auth/react"
+import { tryOutFetchTransaction } from "@/lib/callSafcomFetchFunction"
 
 const NavbarButtons = () => {
   const { status, data: session } = useSession()
+
+  const payfunction = async () => {
+    await tryOutFetchTransaction({ amount: 10, phone: 254712990778, videoCode: "VID1001" })
+  }
 
   return (
     <>
@@ -30,7 +35,7 @@ const NavbarButtons = () => {
             <button onClick={() => signIn()}>login</button>
           </div>
           <div className="register">
-            <button>pay</button>
+            <button onClick={payfunction}>pay</button>
           </div>
         </div>
       )}
