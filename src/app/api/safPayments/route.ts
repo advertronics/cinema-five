@@ -12,7 +12,7 @@ const Timestamp = date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) +
 const Password = btoa(`${BusinessShortCode}${passkey}${Timestamp}`)
 const PartyB = "174379"
 
-export async function POST(req: Request): Promise<String> {
+export async function POST(req: Request) {
   const requestData = await req.json()
 
   const access_token = await generateSafcomAccessToken()
