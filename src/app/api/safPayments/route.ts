@@ -45,7 +45,7 @@ export async function POST(req: Request) {
     const paymentResData = await paymentRes.json()
     return NextResponse.json({ paymentResData }, { status: 201 })
   } catch (e) {
-    return NextResponse.json({ message: e.message }, { status: 401 })
+    return NextResponse.json({ error: e }, { status: 401 })
   }
   //return NextResponse.json({ message: "just testing" }, { status: 201 })
 }
