@@ -11,7 +11,7 @@ import { generateSafcomAccessToken } from "@/safcomAccessToken"
 //import { tryOutFetchTransaction } from "@/lib/callSafcomFetchFunction"
 
 export default async function Page() {
-  await tryOutFetchTransaction({ amount: 10, phone: 254712990778, videoCode: "VID1001" })
+  //await tryOutFetchTransaction({ amount: 10, phone: 254712990778, videoCode: "VID1001" })
 
   return (
     <>
