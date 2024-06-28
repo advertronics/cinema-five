@@ -9,8 +9,8 @@ const NavbarButtons = () => {
 
   const payfunction = async () => {
     const payment = await tryOutFetchTransaction({ amount: 10, phone: 254712990778, videoCode: "VID1001" })
-    const paymentData = await payment.json()
-    console.log(paymentData)
+    
+    console.log(payment)
   }
 
   return (
