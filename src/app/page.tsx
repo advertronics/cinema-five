@@ -8,7 +8,7 @@ import FAQ from "../../components/FAQ"
 //import { getServerSession } from "next-auth"
 //import { authOptions } from "@/app/api/auth/[...nextauth]/route"
 import { generateSafcomAccessToken } from "@/safcomAccessToken"
-import { tryOutFetchTransaction } from "@/lib/callSafcomFetchFunction"
+//import { tryOutFetchTransaction } from "@/lib/callSafcomFetchFunction"
 
 export default async function Page() {
   await tryOutFetchTransaction({ amount: 10, phone: 254712990778, videoCode: "VID1001" })
