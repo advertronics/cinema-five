@@ -33,7 +33,7 @@ export async function POST(req: Request) {
         Timestamp: Timestamp,
         TransactionType: "CustomerPayBillOnline",
         Amount: 1,
-        PartyA: 254712990778,
+        PartyA: 254708374149,,
         PartyB: 174379,
         PhoneNumber: 254712990778,
         CallBackURL: callBackURL,
