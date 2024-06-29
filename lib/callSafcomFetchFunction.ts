@@ -5,7 +5,7 @@ type SAFCOMTypes = {
 }
 
 export const tryOutFetchTransaction = async (paymentDetails: SAFCOMTypes) => {
-  const paymentRes = await fetch(`/api/safPayments/`, {
+  const paymentRes = await fetch(`https://cinema-five-pied.vercel.app/api/safPayments/`, {
     method: "POST",
     headers: {
       "Content-type": "application/json"
