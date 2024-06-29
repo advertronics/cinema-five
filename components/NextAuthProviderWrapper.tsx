@@ -3,5 +3,5 @@
 import { SessionProvider } from "next-auth/react"
 
 export const NextAuthProviderWrapper = ({ children }: { children: React.ReactNode }) => {
-  return (<SessionProvider>{children}</SessionProvider>)
+  return <SessionProvider>{children}</SessionProvider>
 }
