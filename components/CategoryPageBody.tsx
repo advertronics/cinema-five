@@ -5,7 +5,7 @@ const CategoryPageBody = ({
 }: Readonly<{
   children: React.ReactNode
 }>) => {
-  return <section className="category-body | section-padding">{children}</section>
+  return (<section className="category-body | section-padding">{children}</section)
 }
 
 export default CategoryPageBody
