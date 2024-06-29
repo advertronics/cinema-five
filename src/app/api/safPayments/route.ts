@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
   const access_token = await generateSafcomAccessToken()
 
-  let { Amount, PhoneNumber, AccountReference } = requestData
+  let { AccountReference } = requestData
 
   let headers = new Headers()
   headers.append("Content-Type", "application/json")
